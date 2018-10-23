@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Assignment #2 Puzzle</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src='scriptlib.js'></script>
+
+</head>
+
+<body>
+
+
+<ul class="navbar">
+  <li><a href="../Index.html">Home page</a>
+  <li><a href="Puzzle.html">Assignment#2 Puzzle</a>
+  <li><a href="Multiplication.html">Multiplication</a>
+  <li><a href="Division.html">Division</a>
+</ul>
+
+<h1>Welcome to Play My Puzzle Game!</h1><br>
+<br>
+<button type="button" style= "
+  margin-left: 500px;
+  margin-right: 300px;"
+  class="btn btn-danger btn-lg" onclick="revealMessage()">Click Me to Start!</button><br>
+  <br>
+<div id="hiddenmessage" style="display:none">
+    <h4>Sorry, but you need to exercise your finger by Counting Down before playing.</h4>
+    <br><br><button id="countDownButton" style= "
+      margin-left: 560px;" class="btn btn-info btn-lg" onclick="countDown()">10</button>
+
+</div>
+
+<br>
+<br><h3 id="demo">Here shows the answer</h3><br>
+<br>
+
+<div id="hiddenpuzzle" style="display:none">
+
+    <button type="button" style= "
+      margin-left: 520px;
+      margin-right: 300px;" class="btn btn-success" onclick="ask_for_x_n_y();">(Pop Up) X * Y = ?</button><br><br><br>
+    <button type="button" style= "
+      margin-left: 550px;
+      margin-right: 300px;" class="btn btn-primary" onclick="ask_xy();">X ÷ Y = ?</button>
+
+<form id="myForm">
+    <div class="form-group">
+      <div class="col-xs-4">
+          <label for="1st">Enter first number:</label>
+          <input type="text" class="form-control">
+      </div>
+      <div class="col-xs-4">
+          <label for="2nd">Enter second number:</label>
+          <input type="text" class="form-control">
+      </div>
+      <div class="col-xs-4">
+      </div>
+
+    </div>
+</form>
+</div>
+
+
+<div class="col-xs-12">
+    <address>Made 20 October 2018<br>
+      by myself.</address>
+</div>
+
+</body>
+</html>
