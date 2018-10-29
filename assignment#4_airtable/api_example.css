@@ -17,19 +17,3 @@ th, td
 h1 {
     text-align: center;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-li {
-    width: 250px;
-    background: #e6e6e6;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    margin: 50px;
-}

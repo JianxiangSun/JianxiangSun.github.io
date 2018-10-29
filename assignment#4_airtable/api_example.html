@@ -1,14 +1,85 @@
 <html>
     <head>
         <title>Top 9 Hong Kong Museums</title>
-        <link rel="stylesheet" type="text/css" href="api_example.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+<script src='scriptlib.js'></script>
+
+<style type="text/css">
+body {
+    color: white;
+      background-position: center center;
+      background-size:cover;
+      background-color: gray;
+    font-family: Arial,Times, serif;
+}
+
+table {margin-left: 10px;margin-right: 60px;border:1px solid black; border-spacing: 10px;
+    border-collapse: collapse;width:200; font-family:Arial
+}
+
+th, td
+      { height:2px;padding:10px;border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+</style>
 
     </head>
     <body>
     <h1>Top 9 Hong Kong Museums</h1>
+<br>
+    <div id="sorry" style="display:none">
+    <h3 align="center" color="yellow">Unfortunately, I have not yet figured out<br>
+      how to filter the data out from the table constructed by Airtable's Api<br>
+    I will try to work out of this</h3><br>
+    </div>
+
+<div id="button" align="center">
+
+<div id="free">
+    <button type="button" style= "font-size:25px;
+    " class="btn btn-primary" onclick="free();">Only show <br>free museums</button>
+</div>
+<br>
+
+<div id="review">
+<button type="button" style= "font-size:30px;
+margin-right: 80px;" class="btn btn-danger btn-lg" onclick="4();">4</button>
+<button type="button" style= "font-size:30px
+  margin-right: 10px;" class="btn btn-danger btn-lg" onclick="4.5();">4.5</button>
+</div>
+
+<br>
+
+<div id="location">
+
+    <button type="button" style= "font-size:25px;
+      margin-right: 10px;" class="btn btn-warning" onclick="new_territories();">New Territories</button>
+      <button type="button" style= "font-size:25px;
+        margin-right: 10px;" class="btn btn-warning" onclick="hong_kong();">Hong Kong</button>
+        <button type="button" style= "font-size:25px;
+          margin-right: 10px;" class="btn btn-warning" onclick="kowloon();">Kowloon</button>
+</div>
+
+<br>
+
+<div id="open">
+<button type="button" style= "font-size:25px;
+margin-right: 10px;" class="btn btn-success" onclick="open_7_days();">Open 7 days <br>a week</button>
+<button type="button" style= "font-size:25px;
+margin-right: 10px;" class="btn btn-success" onclick="closed_2();">Closed on Tuesday</button>
+<button type="button" style= "font-size:25px;
+  margin-right: 10px;" class="btn btn-success" onclick="closed_4();">Closed on Thursday</button>
+
+</div>
+<br><br>
+</div>
+
 
     <div id="app">
 
@@ -87,5 +158,6 @@ axios.get(
             })
         </script>
         <br/>
+
     </body>
 </html>
