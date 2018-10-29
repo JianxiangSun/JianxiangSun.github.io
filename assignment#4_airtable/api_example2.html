@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Top 9 Hong Kong Museums</title>
+        <link rel="stylesheet" type="text/css" href="api_example.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+
+    </head>
+    <body>
+    <h1>Top 9 Hong Kong Museums</h1>
+
+    <div id="app">
+
+      <table  data-toggle="table"
+       data-url="/gh/get/response.json/wenzhixin/bootstrap-table/tree/master/docs/data/data1/"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true">
+        <thead>
+                <tr>
+                   <th>博物馆名</th>
+                   <th>门票</th>
+                   <th>类型</th>
+                   <th>图片</th>
+                   <th>开馆时间</th>
+                   <th>游客评价 (from: TripAdvisor)</th>
+                   <th>五星评价百分比 (from: TripAdvisor)</th>
+                   <th>联系电话</th>
+                   <th>地址</th>
+                   <th>网址</th>
+                </tr>
+          </thead>
+
+              <tbody>
+              <tr v-for="item in items">
+                <td>{{ item['fields']['博物馆名'] }}</td>
+                <td>{{ item['fields']['门票'] }}</td>
+                <td>{{ item['fields']['类型'] }}</td>
+                <td align="center"><img :src="item['fields']['图片'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['图片']" width="350"></td>
+                <td>{{ item['fields']['开馆时间'] }}</td>
+                <td>{{ item['fields']['游客评价 (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['五星评价百分比 (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['联系电话'] }}</td>
+                <td>{{ item['fields']['地址'] }}</td>
+                <td>{{ item['fields']['网址'] }}</td>
+
+              </tr>
+              </tbody>
+
+     </table>
+    </div><!--app-->
+
+        <!-- Include Dependancy Scripts -->
+        <script type="text/javascript" src="https://unpkg.com/vue"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+<script type="text/javascript">
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    items: []
+                },
+                mounted: function(){
+                   this.loadItems();
+                },
+                methods: {
+                    loadItems: function(){
+
+                        // Init variables
+                        var self = this
+                        var app_id = "appmYa29e4IDJ5cmK";
+                        var app_key = "keyAJxw8CDlX3pUko";
+                        this.items = []
+axios.get(
+                            "https://api.airtable.com/v0/"+app_id+"/香港九大最受欢迎博物馆?view=Grid%20view",
+                            {
+                                headers: { Authorization: "Bearer "+app_key }
+                            }
+                        ).then(function(response){
+                            self.items = response.data.records
+                        }).catch(function(error){
+                            console.log(error)
+                        })
+                    }
+                }
+            })
+        </script>
+        <br/>
+    </body>
+</html>
