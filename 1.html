@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <meta charset="UTF-8">
+        <link rel='stylesheet' type='text/css' href='css/styles.css'>
+        <script type="text/javascript" src="__jquery.tablesorter/jquery-latest.js"></script>
+        <script type="text/javascript" src="__jquery.tablesorter/jquery.tablesorter.js"></script>
+        <script src="lib/w3.js"></script>
+        // call the tablesorter plugin
+        <script type="text/javascript" id="js">
+             var tableRows = document.getElementsByTagName('tr');
+             console.dir(tableRows);
+             //get all the elements inside tr tag
+             //eventListeners are added to the buttons inside the script tag in body
+             //See the script in the body tag
+        </script>
+        </head>
+        <body>
+              <table id="myTable" class="tablesorter">
+                  <thead>
+                        <tr>
+                           <th>Name</th>
+                           <th>Username</th>
+                           <th>PasswordExpired</th>
+                           <th>DaysRemaining</th>
+                           <th>Roaming</th>
+                           <th>Exempt</th>
+                           <th>Violation</th>
+                           <th>Note</th>
+                       </tr>
+                  </thead>
+                  <tbody>
+                        <tr class="Healthy"><td>Username</td><td>email@comapny.com</td><td>False</td><td>47</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+                        <tr class="Exempt"><td>Username</td><td>email@comapny.com</td><td>False</td><td>N/A</td><td>False</td><td>True</td><td>False</td><td>The password of this account never expires</td></tr>
+                        <tr class="Healthy"><td>Username</td><td>email@comapny.com</td><td>False</td><td>44</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+                        <tr class="Soon"><td>Username</td><td>email@comapny.com</td><td>False</td><td>3</td><td>False</td><td>False</td><td>False</td><td>Imminent Expiration. Mail Sent</td></tr>
+                        <tr class="Inactive"><td>Username</td><td>email@comapny.com</td><td>True</td><td>N/A</td><td>False</td><td>False</td><td>False</td><td>This account has not logged into the domain in more than 90 days.</td></tr>
+                        <tr class="Healthy"><td>Username</td><td>email@comapny.com</td><td>False</td><td>53</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+                        <tr class="Healthy"><td>Username</td><td>aemail@comapny.com</td><td>False</td><td>51</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+                        <tr class="Healthy"><td>Username</td><td>email@comapny.com</td><td>False</td><td>88</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+                        <tr class="Healthy"><td>Username</td><td>email@comapny.com</td><td>False</td><td>53</td><td>False</td><td>False</td><td>False</td><td>Healthy Password Status</td></tr>
+               </tbody>
+         </table>
+         <br/>
+         <button id="Healthy">Only Healthy</button>
+         <br/>
+         <button id="Soon">Only Soon</button>
+         <br/>
+         <button id="Inactive">Only Inactive</button>
+         <br/>
+         <button id="Exempt">Only Exempt</button>
+         <br/>
+         <button id="all">Show All</button>
+         <br/>
+      <script>
+            //get all buttons
+            var healthy = document.getElementById('Healthy');
+            console.log(healthy);
+            var soon = document.getElementById('Soon');
+            var inactive = document.getElementById('Inactive');
+            var exempt = document.getElementById('Exempt');
+            var all = document.getElementById('all');
+
+            //check if the class exists for each of the tr element
+            healthy.addEventListener('click', function() {
+                for(var i=1; i<tableRows.length; i++) { //loop starts with 1 and not 0 because first element is th
+                    if(tableRows[i].className !== 'Healthy') {
+                        tableRows[i].hidden = true; //hide other than Healthy
+                    } else {
+                        tableRows[i].hidden = false; //display only Healthy
+                    }
+                }
+            });
+
+            soon.addEventListener('click', function() {
+                for(var i=1; i<tableRows.length; i++) {
+                    if(tableRows[i].className !== 'Soon') {
+                        tableRows[i].hidden = true;
+                    } else {
+                        tableRows[i].hidden = false;
+                    }
+                }
+            });
+
+            inactive.addEventListener('click', function() {
+                for(var i=1; i<tableRows.length; i++) {
+                    if(tableRows[i].className !== 'Inactive') {
+                        tableRows[i].hidden = true;
+                    } else {
+                        tableRows[i].hidden = false;
+                    }
+                }
+            });
+
+            exempt.addEventListener('click', function() {
+                for(var i=1; i<tableRows.length; i++) {
+                    if(tableRows[i].className !== 'Exempt') {
+                        tableRows[i].hidden = true;
+                    } else {
+                        tableRows[i].hidden = false;
+                    }
+                }
+            });
+
+            all.addEventListener('click', function() {
+                for(var i=1; i<tableRows.length; i++) {
+                    tableRows[i].hidden = false;
+                }
+            });
+
+
+      </script>
+      </body>
+      </html>

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Top 9 Hong Kong Museums</title>
+        <link rel="stylesheet" type="text/css" href="api_example.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+
+    </head>
+    <body>
+    <h1>Top 9 Hong Kong Museums</h1>
+
+    <div id="app">
+
+      <table  data-toggle="table"
+       data-url="/gh/get/response.json/wenzhixin/bootstrap-table/tree/master/docs/data/data1/"
+       data-search="true"
+       data-show-refresh="true"
+       data-show-toggle="true"
+       data-show-columns="true">
+        <thead>
+                <tr>
+                   <th data-field="name">Museum Name</th>
+                   <th data-field="stargazers_count">Admission Fees</th>
+                   <th data-field="forks_count">Types</th>
+                   <th data-field="description">Images</th>
+                   <th>Opening Hours</th>
+                   <th>Traveler Overview (from: TripAdvisor)</th>
+                   <th>% of rating “Excellent” (from: TripAdvisor)</th>
+                   <th>Phone Number</th>
+                   <th>Address</th>
+                   <th>Website</th>
+                </tr>
+          </thead>
+
+              <tbody>
+              <tr v-for="item in items">
+                <td>{{ item['fields']['Museum Name'] }}</td>
+                <td>{{ item['fields']['Admission Fees'] }}</td>
+                <td>{{ item['fields']['Types'] }}</td>
+                <td align="center"><img :src="item['fields']['Images'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Images']" width="350"></td>
+                <td>{{ item['fields']['Opening Hours'] }}</td>
+                <td>{{ item['fields']['Traveler Overview (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['% of rating “Excellent” (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['Phone Number'] }}</td>
+                <td>{{ item['fields']['Address'] }}</td>
+                <td>{{ item['fields']['Website'] }}</td>
+
+              </tr>
+              </tbody>
+
+     </table>
+    </div><!--app-->
+
+        <!-- Include Dependancy Scripts -->
+        <script type="text/javascript" src="https://unpkg.com/vue"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+<script type="text/javascript">
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    items: []
+                },
+                mounted: function(){
+                   this.loadItems();
+                },
+                methods: {
+                    loadItems: function(){
+
+                        // Init variables
+                        var self = this
+                        var app_id = "appsW17MiCVbB2ngY";
+                        var app_key = "keyAJxw8CDlX3pUko";
+                        this.items = []
+axios.get(
+                            "https://api.airtable.com/v0/"+app_id+"/Top%209%20Museums%20in%20Hong%20Kong?view=Grid%20view",
+                            {
+                                headers: { Authorization: "Bearer "+app_key }
+                            }
+                        ).then(function(response){
+                            self.items = response.data.records
+                        }).catch(function(error){
+                            console.log(error)
+                        })
+                    }
+                }
+            })
+        </script>
+        <br/>
+    </body>
+</html>

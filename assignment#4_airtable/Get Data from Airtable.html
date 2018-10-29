@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Assignment #4 Top 9 Hong Kong Museums</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src='scriptlib.js'></script>
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+
+
+</head>
+
+<body>
+
+
+<ul class="navbar">
+  <li><a href="../index.html">Home page</a>
+  <li><a href="api_example.html">Embeded Airtable<br>through Api<br>(foreign tourist)</a>
+  <li><a href="../index.html">Embeded Airtable<br>through Api<br>(内地游客)</a>
+
+</ul>
+
+<h1>Top 9 Hong Kong Museums<br>香港最受欢迎的九大博物馆</h1>
+
+<h2>I am a...<br>我 是 ...</h2>
+<br><br><br>
+<div align="center">
+  <button type="button" style="margin-right:50px; font-size:25px; height:90px; width:200px"
+          class="btn btn-warning" id='english'>Foreign tourist</button>
+  <button type="button" style="font-size:30px; height:90px; width:200px"
+          class="btn btn-success" id='mainland'>内地游客</button>
+
+</div>
+
+<br>
+
+<div id="versionchoice" align="left" style="display:none">
+  <button type="button" style="margin-left:370px; margin-right:50px; font-size:20px; height:100px; width:190px"
+          class="btn btn-primary" id='api' onclick="{location.href='api_example.html'}">Embeded table<br>with Airtable api <br>(More interesting!)</button>
+  <button type="button" style="font-size:20px; height:70px; width:150px"
+          class="btn btn-primary" id='airtable'>Embeded<br> Airtable</button>
+</div>
+
+<iframe class="airtable-embed" style="display:none" src="https://airtable.com/embed/shr2TVhhBa05f7vj6?backgroundColor=gray&viewControls=on"
+frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;">
+</iframe>
+
+<div id="versionchoice2" align="left" style="display:none">
+  <button type="button" style="margin-left:370px; margin-right:50px; font-size:20px; height:100px; width:190px"
+          class="btn btn-primary" id='api2' onclick="{location.href='api_example1.html'}">Embeded table<br>with Airtable api <br>(More interesting!)</button>
+  <button type="button" style="font-size:20px; height:70px; width:150px"
+          class="btn btn-primary" id='airtable2'>Embeded<br> Airtable</button>
+</div>
+
+<iframe class="airtable-embed2" style="display:none" src="https://airtable.com/embed/shrMc2xpUeHUY5E5w?backgroundColor=red&viewControls=on"
+frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;">
+</iframe>
+
+<div class="col-xs-12">
+    <address>Made 28 October 2018<br>
+      by myself.</address>
+</div>
+
+<script src='scriptlib2.js'></script>
+</body>
+</html>
