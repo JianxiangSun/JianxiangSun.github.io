@@ -2,10 +2,10 @@ body {
     padding-left: 11em;
     color: white;
     background-image:url('12.jpg');
-     background-repeat: no-repeat;
-      background-position: center center;
-      background-size:cover;
-        background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-color: gray;
     font-family: Georgia, Arial,Times, serif;
 
     }

@@ -37,9 +37,11 @@ background-color: pink;
 color: black;
 font-style:oblique;
 }
-p {margin-left: 100px;
+
+<div>p {margin-left: 100px;
 font-size: 20px
 }
+</div>
 ul.navbar {
     position: absolute;
     top: 2em;
