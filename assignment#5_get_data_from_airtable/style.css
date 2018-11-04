@@ -1,0 +1,36 @@
+
+body {
+    color: black;
+      background-position: center center;
+      background-size:cover;
+      background-color: #FAFAD2;
+    font-family: Arial,Times, serif;
+}
+
+
+th, td
+      { height:2px;padding:50px;border: 2px solid black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.c3-axis-y text
+{
+  font-size: 15px; font-family: Arial,Times, serif; font-weight:bold
+}
+
+.c3-axis-x text
+{
+  display:none; font-size: 0px;
+}
+
+.c3-legend-item text
+{
+  font-size: 15px; font-family: Arial,Times, serif;//change the size of the fonts
+}
+
+.c3-chart text {
+  font-size: 25px;font-family: Arial,Times, serif;
+}

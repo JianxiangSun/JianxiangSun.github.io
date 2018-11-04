@@ -96,8 +96,8 @@ margin-right: 10px;" class="btn btn-success" onclick="closed_2();">Closed on Tue
                    <th>Types</th>
                    <th>Images</th>
                    <th>Opening Hours</th>
-                   <th>Traveler Overview</th>
-                   <th>% of rating “Excellent”</th>
+                   <th>Traveler Overview (from: TripAdvisor)</th>
+                   <th>% of rating “Excellent” (from: TripAdvisor)</th>
                    <th>Phone Number</th>
                    <th>Address</th>
                    <th>Website</th>
@@ -106,14 +106,14 @@ margin-right: 10px;" class="btn btn-success" onclick="closed_2();">Closed on Tue
 
               <tbody>
               <tr v-for="item in items">
-                <td>{{ item['fields']['Museum_Name'] }}</td>
-                <td>{{ item['fields']['Admission_Fees'] }}</td>
+                <td>{{ item['fields']['Museum Name'] }}</td>
+                <td>{{ item['fields']['Admission Fees'] }}</td>
                 <td>{{ item['fields']['Types'] }}</td>
-                <td><img :src="item['fields']['Images'][0]['url']" width="350"></td>
-                <td>{{ item['fields']['Opening_Hours'] }}</td>
-                <td>{{ item['fields']['Traveler_Overview'] }}</td>
-                <td>{{ item['fields']['Percentage_of_rating_Excellent'] }}</td>
-                <td>{{ item['fields']['Phone_Number'] }}</td>
+                <td align="center"><img :src="item['fields']['Images'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Images']" width="350"></td>
+                <td>{{ item['fields']['Opening Hours'] }}</td>
+                <td>{{ item['fields']['Traveler Overview (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['% of rating “Excellent” (from: TripAdvisor)'] }}</td>
+                <td>{{ item['fields']['Phone Number'] }}</td>
                 <td>{{ item['fields']['Address'] }}</td>
                 <td>{{ item['fields']['Website'] }}</td>
 
