@@ -105,8 +105,9 @@ $(document).ready(function(){
                          type : 'bar',
                         labels: true
                      },
-                     axis: {
 
+                     axis: {
+                     x: {label: 'Museums'},
                          y: {
                            max: 70,
                            min: 0,
