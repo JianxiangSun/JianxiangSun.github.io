@@ -13,7 +13,7 @@ $(document).ready(function(){
     var table1_dataSet = [];
     $.getJSON(airtable_read_endpoint, function(result) {
            $.each(result.records, function(key,value) {
-               table1_items = [];
+               items = {};
                    table1_items.push(value.fields.Museum_Name);
                    table1_items.push(value.fields.Admission_Fees);
                    table1_items.push(value.fields.Types);

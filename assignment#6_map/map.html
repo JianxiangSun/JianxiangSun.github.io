@@ -1,71 +1,140 @@
-<html>
-<head>
-  <title>Town Page</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="leaflet.css">
-  <link rel="shortcut icon" href="">
-  <script src="leaflet.js"></script>
-  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="xxx.ico">
+
+    <title>View Locations</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+<link rel="shortcut icon" href="">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="jumbotron.css" rel="stylesheet">
+
+
   </head>
 
-<body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="../index1.html">My Web</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index1.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://airtable.com/tblMoTVH7xs3rJHRr/viwSa6RG9Kg8v2MgZ">The TOP 9 Museums in Hong Kong</a>
+          </li>
+          <li class="nav-item">
+            <a class="View Locations" href="map.html">View Locations</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assignments</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="https://airtable.com/tblMoTVH7xs3rJHRr/viwSa6RG9Kg8v2MgZ">#1 Data gathering</a>
+              <a class="dropdown-item" href="assignment%232_js_puzzle/Puzzle.html">#2 Puzzle</a>
+              <a class="dropdown-item" href="https://github.com/jianxiangsun/jianxiangsun.github.io/tree/master/assignment%233_data_scraping_and_refining">#3 Data scraping and refining</a>
+              <a class="dropdown-item" href="assignment%234_airtable/Get%20Data%20from%20Airtable.html">#4 The Top 9 Hong Kong Museums</a>
+              <a class="dropdown-item" href="assignment%235_get_data_from_airtable/api_example.html">#5 Get Data from Airtable ($getJSON)</a>
+              <a class="dropdown-item" href="map.html">#6 Map</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home page</a>
-        <li><a href="musings.html">Musings</a>
-        <li class="active"><a href="town.html">My town</a>
-        <li><a href="links.html">Links</a>
-      </ul>
-    </div>
-</nav>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <h1>Town Page</h1>
-      <p>Welcome to my town page!</p>
-      <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
-      <button type="button" class="btn btn-warning" id='roll_up' onclick="show_districts();">Show Districts</button><br>
-    </div>
-  </div>
-</div>
-<script>
-    var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+    </nav>
 
-    var map = L.map('map')
-          .addLayer(mapboxTiles)
-          .setView([22.287111, 114.191667], 13);
+    <main role="main">
 
-    var items = [];
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/venues?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
-    var data = [];
-    $.getJSON(airtable_read_endpoint, function(result) {
-           $.each(result.records, function(key,value) {
-               items = {};
-                   items["name"] = value.fields.Name;
-                   items["url"] = value.fields.url;
-                   items["image_url"] = value.fields.image_url;
-                   items["latitud"] = value.fields.Lat;
-                   items["longitud"] = value.fields.Lng;
-                   data.push(items);
-                   console.log(items);
-            }); // end .each
-    }); // end getJSON
-</script>
-<script>
-function show_districts(){
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron" style="background-image:url(background.jpg);background-repeat: no-repeat; background-size:cover">
+        <div class="container">
+          <br>
+          <h1 class="display-4">View the museum locations</h1>
+          <h3 class="display-10">And plan your trip now!</h3><br>
+        </div>
+      </div>
 
-  for (var i in data) {
-      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
-      L.marker( latlng )
-          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'" width = "80px"><br>'+data[i].name + '</a>' )
-          .addTo(map);
-  }
-}
-</script>
-</body>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1>Town Page</h1>
+            <p>Welcome to my town page!</p>
+            <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA; margin-left: auto; margin-right: auto;"></div><br>
+            <button type="button" style= "font-size:20px; background-color:blue; margin-left: 500px;"class="btn btn-info btn-lg" id='roll_up' onclick="show_districts();">Show Districts</button><br>
+          </div>
+        </div>
+      </div>
+      <script>
+          var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+
+          var map = L.map('map')
+                .addLayer(mapboxTiles)
+                .setView([22.323554, 114.183632], 12);
+
+                // create custom icon
+      var firefoxIcon = L.icon({
+      iconUrl: 'location.png',
+      iconSize: [70, 60], // size of the icon
+      popupAnchor: [0,-15]
+      });
+
+
+
+          var items = [];
+          var airtable_read_endpoint = "https://api.airtable.com/v0/appsW17MiCVbB2ngY/Top%209%20Museums%20in%20Hong%20Kong?api_key=keyAJxw8CDlX3pUko";
+          var data = [];
+          $.getJSON(airtable_read_endpoint, function(result) {
+                 $.each(result.records, function(key,value) {
+                     items = {};
+                         items["name"] = value.fields.Museum_Name;
+                         items["url"] = value.fields.Website;
+                         items["image_url"] = value.fields.Images2;
+                         items["latitud"] = value.fields.Lat;
+                         items["longitud"] = value.fields.Lng;
+                         data.push(items);
+                         console.log(items);
+                  }); // end .each
+          }); // end getJSON
+      </script>
+      <script>
+      function show_districts(){
+
+        for (var i in data) {
+            var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+            L.marker( latlng , {icon: firefoxIcon})
+            .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+ '" width = "300px"><br>'+data[i].name + '</a>' )
+            .addTo(map);
+        }
+      }
+      </script>
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Made in 11 Nov 2018</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
