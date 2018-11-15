@@ -17,7 +17,7 @@ $(document).ready(function(){
                    table1_items.push(value.fields.Museum_Name);
                    table1_items.push(value.fields.Admission_Fees);
                    table1_items.push(value.fields.Types);
-                   table1_items.push('<td><img src="' + value.fields.Images2 + '" style="width: 350px;"/></td>');
+                   table1_items.push('<td><img src="' + value.fields.Image_url + '" style="width: 350px;"/></td>');
                    table1_items.push(value.fields.Traveler_Overview);
                    table1_items.push(value.fields.Percentage_of_rating_Excellent);
                    table1_items.push(value.fields.Opening_Hours);
