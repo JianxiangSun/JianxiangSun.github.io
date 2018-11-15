@@ -1,44 +1,39 @@
-function free() {
-         document.getElementById("sorry").style.display = 'block';
-
-}
-
-
 $(document).ready(function(){
 
   $("button#roll_up").click(function() {
-    var table1_items = [];
-    var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appsW17MiCVbB2ngY/Top%209%20Museums%20in%20Hong%20Kong?api_key=keyAJxw8CDlX3pUko";
-    var table1_dataSet = [];
-    $.getJSON(airtable_read_endpoint, function(result) {
-           $.each(result.records, function(key,value) {
-               items = {};
-                   table1_items.push(value.fields.Museum_Name);
-                   table1_items.push(value.fields.Admission_Fees);
-                   table1_items.push(value.fields.Types);
-                   table1_items.push('<td><img src="' + value.fields.Image_url + '" style="width: 350px;"/></td>');
-                   table1_items.push(value.fields.Traveler_Overview);
-                   table1_items.push(value.fields.Percentage_of_rating_Excellent);
-                   table1_items.push(value.fields.Opening_Hours);
-                   table1_items.push(value.fields.Phone_Number);
-                   table1_items.push(value.fields.Address);
+       var table1_items = [];
+       var i = 0;
+       var airtable_read_endpoint = "https://api.airtable.com/v0/appsW17MiCVbB2ngY/Top%209%20Museums%20in%20Hong%20Kong?api_key=keyAJxw8CDlX3pUko";
+       var table1_dataSet = [];
+       $.getJSON(airtable_read_endpoint, function(result) {
+              $.each(result.records, function(key,value) {
+                  table1_items = [];
+                        table1_items.push(value.fields.Museum_Name);
+                        table1_items.push(value.fields.Admission_Fees);
+                        table1_items.push(value.fields.Types);
+                        table1_items.push('<img src="' + value.fields.Image_url + '" width = "300px">');
+                        table1_items.push(value.fields.Traveler_Overview);
+                        table1_items.push(value.fields.Percentage_of_rating_Excellent);
+                        table1_items.push(value.fields.Opening_Hours);
+                        table1_items.push(value.fields.Phone_Number);
+                        table1_items.push(value.fields.Address);
 
-                   table1_dataSet.push(table1_items);
-                   console.log(table1_items);
+                      table1_dataSet.push(table1_items);
+                      console.log(table1_items);
+               }); // end .each
+               console.log(table1_dataSet);
 
-            }); // end .each
 
          $('#table1').DataTable( {
             data: table1_dataSet,
             scrollY:'80vh',
             "scrollX": true,
-            scrollCollapse:false,
-            paging:false,
+             scrollCollapse:false,
+             paging:false,
              retrieve: true,
-             columns: [
+            columns: [
                  { title: "Museum Name",
-                   defaultContent:""},
+                   defaultContent:"" },
                  { title: "Admission Fees",
                      defaultContent:"" },
                  { title: "Types",
@@ -47,7 +42,7 @@ $(document).ready(function(){
                      defaultContent:""},
                  { title: "Traveler Overview",
                    defaultContent:""},
-                   { title: "% of rating “Excellent”",
+                   { title: "% of rating &quot;Excellent&quot;",
                      defaultContent:""},
                  { title: "Opening Hours",
                    defaultContent:""},
@@ -84,7 +79,7 @@ $(document).ready(function(){
                   columns: [
                       { title: "Museum Name",
                         defaultContent:""},
-                      { title: "Percentage of rating “Excellent” (%)",
+                      { title: "Percentage of rating &quot;Excellent&quot; (%)",
                         defaultContent:""},
                     ] // rmf columns
                 } ); // end dataTable
@@ -107,7 +102,9 @@ $(document).ready(function(){
                      },
 
                      axis: {
-                     x: {label: 'Museums'},
+                         x: {
+                         label: {text: 'Museums'},
+                     },
                          y: {
                            max: 70,
                            min: 0,
@@ -115,16 +112,13 @@ $(document).ready(function(){
                            text: 'Percentage of rating “Excellent” (%)',
                            position: 'outer-top'
                          },
-
                            padding: {top:0, bottom:0}
-                         }
+                         },
                      },
                      tooltip: {
                      grouped: false
                      },
-                     donut: {
-                         title: "Tasks for Each Stage:",
-                     }
+                  
                  });
 
           }); // end .getJSON

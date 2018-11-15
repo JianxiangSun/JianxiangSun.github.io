@@ -1,19 +1,13 @@
 <html>
     <head>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71445513-6"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-71445513-6');
-      </script>
 
         <title>Top 9 Hong Kong Museums</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
         <link rel="stylesheet" type="text/css" href="table.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -26,60 +20,11 @@
 
 <body>
     <h1>Top 9 Hong Kong Museums</h1>
-<br>
-    <div id="sorry" style="display:none">
-    <h3 align="center" color="yellow">Unfortunately, I have not yet figured out<br>
-      how to filter the data out from the table constructed by Airtable's Api<br>
-    I will try to work out of this</h3><br>
-    </div>
-
-
-
+<br><br>
 <div align="center">
 <button type="button" class="btn btn-warning btn-lg" id='roll_up' align="center">Get data</button><br>
 </div>
 
-<div id="allbutton" align="center" style="display:none">
-<div id="free">
-    <button type="button" style= "font-size:25px;
-    " class="btn btn-primary" onclick="free();">Only show <br>free museums</button>
-</div>
-<br>
-
-<div id="review">
-<button type="button" style= "font-size:30px; margin-right: 30px; background-color:#234f25;" class="btn btn-danger btn-lg" onclick="4();">4 Stars</button>
-<button type="button" style= "font-size:30px;"
- class="btn btn-danger btn-lg" onclick="4.5();">4.5 Stars</button>
-</div>
-
-<br>
-
-
-<div id="location">
-
-    <button type="button" style= "font-size:25px;
-      margin-right: 10px;" class="btn btn-warning" onclick="new_territories();">New Territories</button>
-      <button type="button" style= "font-size:25px;
-        margin-right: 10px;" class="btn btn-warning" onclick="hong_kong();">Hong Kong</button>
-        <button type="button" style= "font-size:25px;
-          margin-right: 10px;" class="btn btn-warning" onclick="kowloon();">Kowloon</button>
-</div>
-
-<br>
-
-<div id="open">
-<button type="button" style= "font-size:25px;
-margin-right: 10px;" class="btn btn-success" onclick="open_7_days();">Open 7 days a week</button>
-<button type="button" style= "font-size:25px;
-margin-right: 10px;" class="btn btn-success" onclick="closed_2();">Closed on Tuesday</button>
-<button type="button" style= "font-size:25px;
-  margin-right: 10px;" class="btn btn-success" onclick="closed_4();">Closed on Thursday</button>
-
-</div>
-</div>
-<br><br>
-
-<!-- Sign and date the page, it's only polite! -->
 
 <div class="table-responsive" style="margin-left: 30px;margin-right: 30px">
 <table id="table1" style="word-wrap:break-word; word-break:normal;" width="50%" class="table table-striped table-bordered">
@@ -94,8 +39,9 @@ margin-right: 10px;" class="btn btn-success" onclick="closed_2();">Closed on Tue
     <address>Made 4 November 2018<br>
       by myself.</address>
 </div>
-<script src='table.js'></script>
+
 <script src='scriptlib.js'></script>
+<script src='table.js'></script>
 
 </body>
 </html>
