@@ -1,15 +1,7 @@
 $(document).ready(function(){
-  $("button#english").click(function() {
-  $("#versionchoice").slideToggle(300);
-$("#mainland").slideToggle(300);
-  });
-});
-
-
-
 $("button#mainland").click(function() {
     $("#versionchoice2").slideToggle(300);
-    $("#english").slideToggle(300);
+});
 });
 
 var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
