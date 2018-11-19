@@ -1,82 +1,48 @@
-body {
-    padding-left: 11em;
-    color: white;
-    background-image:url('background.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size:cover;
-    background-color: gray;
-    font-family: Georgia, Arial,Times, serif;
+
+#about {
+    color: black;
+      background-position: center center;
+      background-size:cover;
+      background-color: #BBFFFF;
+    font-family: Arial,Times, serif;
+}
+
+tfoot input {
+        width: 100%;
+        padding: 12px;
+
     }
+
+th, td
+      { height:2px;padding:50px;border: 2px solid black;
+}
+
 h1 {
-background-color:rgba(0,0,0,0.5);
-
-  text-align: center;
-  font-family: Arial;
- }
-h3 {
-background-color:rgba(0,0,0,0.2);
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
-  text-align: center;
-  margin-left: 300px;
-  margin-right: 300px;
-  padding: 10px;
-  text-align: center;
-  background-color: navy;
-  color: white;
+    text-align: center;
 }
 
-h4 {border-style: solid;
-background-color:rgba(0,0,0,0.2);
-border-width: 1px;
-border-color: black;
-text-align: center;
-margin-left: 300px;
-margin-right: 300px;
-padding: 10px;
-text-align: center;
-background-color: pink;
-color: black;
-font-style:oblique;
+.c3-axis-y text
+{
+  font-size: 15px; font-family: Arial,Times, serif; font-weight:bold, color: blue
 }
 
-p {background-color:rgba(0,0,0,0.68);
-margin-right: 470px;margin-left: 100px;
-font-size: 20px
+.c3-axis-x text
+{
+  display:none; font-size: 0px;
 }
-ul.navbar {
-    position: absolute;
-    top: 2em;
-    left: 1em;
-    width: 12em;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
 
-ul.navbar li {
-  background: white;
-  margin: 1.4em 0;
-  padding: 1em;
-  border-right: 1em solid Green }
+.c3-legend-item text
+{
+  font-size: 16px; font-family: Arial,Times, serif;
+}
 
-ul.navbar li:hover {
-    background: Orange;
- }
+.c3-chart text {
+  font-size: 25px;font-family: Arial,Times, serif;
+}
 
-ul.navbar a {
-  text-decoration: black }
-a:link {
-  color: blue }
-a:visited {
-  color: purple }
-
-address {
-   margin-top: 20em;
-   padding-top: 1em;
-   border-top: thin dotted;
-   position: relative;
-
- }
+.c3 .c3-axis-x path, .c3 .c3-axis-x line {
+    stroke: black;
+}
+.c3 .c3-axis-y path, .c3 .c3-axis-y line {
+    stroke: black;
+}

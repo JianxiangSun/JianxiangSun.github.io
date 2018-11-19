@@ -118,7 +118,7 @@ $(document).ready(function(){
                      tooltip: {
                      grouped: false
                      },
-                  
+
                  });
 
           }); // end .getJSON

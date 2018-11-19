@@ -1,116 +1,684 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129072449-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-129072449-1');
-</script>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="xxx.ico">
 
-    <title>My Website</title>
+    <title>Agency - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+    <script src='https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+    <link rel="shortcut icon" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="jumbotron.css" rel="stylesheet">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+    <link href="css/agency.min.css" rel="stylesheet">
+
   </head>
 
-  <body>
+  <body id="page-top">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="index.html">My Website</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="assignment%235_get_data_from_airtable/api_example.html">Museum Details</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="assignment%236_map/map.html">Plan Trip</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assignments</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="https://airtable.com/tblMoTVH7xs3rJHRr/viwSa6RG9Kg8v2MgZ">#1 Data gathering</a>
-              <a class="dropdown-item" href="assignment%232_js_puzzle/Puzzle.html">#2 Puzzle</a>
-              <a class="dropdown-item" href="https://github.com/jianxiangsun/jianxiangsun.github.io/tree/master/assignment%233_data_scraping_and_refining">#3 Data scraping and refining</a>
-              <a class="dropdown-item" href="assignment%234_airtable/Get%20Data%20from%20Airtable.html">#4 The Top 9 Hong Kong Museums</a>
-              <a class="dropdown-item" href="assignment%235_get_data_from_airtable/api_example.html">#5 Get Data from Airtable ($getJSON)</a>
-              <a class="dropdown-item" href="assignment%236_map/map.html">#6 Map</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Welcome To My Webpage!</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Plan Your Trip</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <main role="main">
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-        <h1 class="display-3">Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Explore the 9 Most Popular Museums in Hong Kong</div>
+          <div class="intro-heading text-uppercase">Here Is For You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
       </div>
+    </header>
 
+    <!-- Services -->
+    <section id="services">
       <div class="container">
-        <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Services</h2>
+            <h3 class="section-heading text-muted">I am a...<br>我 是 ...</h3>
           </div>
         </div>
+<br><br>
+        <div class="row text-center" style="margin-left: 280px;">
 
-        <hr>
 
-      </div> <!-- /container -->
+          <div class="col-md-4">
 
-    </main>
+              <button type="button" style="margin-right:5px; font-size:20px; height:90px; width:200px"
+                      class="btn btn-warning" id='english'>Foreign Visitors</button>
+          </div>
 
-    <footer class="container">
-      <p>&copy; Company 2017-2018</p>
+          <div class="col-md-4">
+             <button type="button" style="font-size:30px; height:90px; width:200px"
+                     class="btn btn-success" id='mainland'>内地游客</button>
+            </div>
+
+        </div>
+<br><br>
+        <div id="versionchoice" align="left" style="display:none">
+          <iframe class="airtable-embed" src="https://airtable.com/embed/shr2TVhhBa05f7vj6?backgroundColor=gray&viewControls=on"
+          frameborder="0" onmousewheel="" width="100%" height="600" style="background: transparent; border: 1px solid #ccc;">
+          </iframe>
+        </div>
+
+        <div id="versionchoice2" align="left" style="display:none">
+          <iframe class="airtable-embed" src="https://airtable.com/embed/shrMc2xpUeHUY5E5w?backgroundColor=red&viewControls=on"
+          frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;">
+          </iframe>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading text-muted">Guess which museum is the oldest</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <a href="https://www.taikwun.hk/en/"><img class="rounded-circle" src="img/about/1.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>May 2018</h4>
+                    <h4 class="subheading">Tai Kwun</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <a href="https://www.thepeak.com.hk/en/the-peak-experience/peak-tram-historical-gallery"><img class="rounded-circle" src="https://dl.airtable.com/e8HR3L1LSBKk4G0pcDJt_%E5%B1%B1%E9%A0%82%E7%BA%9C%E8%BB%8A%E6%AD%B7%E5%8F%B2%E7%8F%8D%E8%97%8F%E9%A4%A8.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>September 2007</h4>
+                    <h4 class="subheading">Peak Tram Historical Gallery</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <a href="http://www.amo.gov.hk/en/hdc.php"><img class="rounded-circle " src="https://dl.airtable.com/4OvLQz4oSQWbSBOgRdzo_%E9%A6%99%E6%B8%AF%E6%96%87%E7%89%A9%E6%8E%A2%E7%9F%A5%E9%A4%A8.JPG" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>October 2005</h4>
+                    <h4 class="subheading">Hong Kong Heritage Discovery Centre</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <a href="http://www.hkmaritimemuseum.org/eng/"><img class="rounded-circle " src="https://dl.airtable.com/DNNOF1Z7TGudtzPMehSq_%E9%A6%99%E6%B8%AF%E6%B5%B7%E4%BA%8B%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg" alt="" width="165" height="156"></a>
+                  </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>September 2005</h4>
+                    <h4 class="subheading">Hong Kong Maritime Museum</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="timeline-image">
+                  <a href="https://www.heritagemuseum.gov.hk/en_US/web/hm/highlights.html"><img class="rounded-circle " src="https://dl.airtable.com/DfFS6vb2TaCfwTnRbhGr_%E9%A6%99%E6%B8%AF%E6%96%87%E5%8C%96%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>December 2000</h4>
+                    <h4 class="subheading">Hong Kong Heritage Museum</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <a href="https://www.madametussauds.com/hong-kong/en/"><img class="rounded-circle " src="img/about/2.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>August 2000</h4>
+                    <h4 class="subheading">Madame Tussauds Hong Kong</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <a href="https://www.lcsd.gov.hk/CE/Museum/Coastal/en_US/web/mcd/aboutus/introduction.html"><img class="rounded-circle " src="https://dl.airtable.com/yjSw1w8QS2mIu7f2qaBW_%E9%A6%99%E6%B8%AF%E6%B5%B7%E9%98%B2%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>July 2000</h4>
+                    <h4 class="subheading">Hong Kong Museum of Coastal Defence</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <a href="https://www.lcsd.gov.hk/CE/Museum/Science/en_US/web/scm/index.html"><img class="rounded-circle " src="https://dl.airtable.com/Fm5ylBNeTPW0hNV4lVCH_%E9%A6%99%E6%B8%AF%E7%A7%91%E5%AD%A6%E9%A6%86.jpg" alt="" width="165" height="156"></a>
+                  </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>April 1991</h4>
+                    <h4 class="subheading">Hong Kong Science Museum</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="timeline-image">
+                  <a href="https://hk.history.museum/en_US/web/mh/"><img class="rounded-circle " src="https://dl.airtable.com/MF5JOhlThCJPBiYJ9H5i_%E9%A6%99%E6%B8%AF%E6%AD%B7%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg" alt="" width="165" height="156"></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>July 1975</h4>
+                    <h4 class="subheading">Hong Kong Museum of History</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted"> </p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Get Data, Get Details</h2>
+            <h3 class="section-subheading text-muted">The museums detailed infomation</h3>
+          </div>
+        </div>
+        <!------------------------------------------------>
+        <div align="center">
+        <button type="button" style="font-size:25px; height:90px; width:200px" class="btn btn-warning btn-lg" id='roll_up'>Get data</button>
+
+        <div class="table-responsive">
+        <table id="table1" width="100%" class="table table-striped table-bordered">
+          <tfoot>
+
+            <tr id="search" style="display:none">
+                <td>Try any name</td>
+                <td>Try 'Free'</td>
+                <td>Try 'Military'</td>
+                <td>Try 'Tue'</td>
+                <td>Try 'Kowloon'</td>
+                <td style="display:none"></td>
+                <td style="display:none"></td>
+                <td style="display:none"></td>
+                <td style="display:none"></td>
+            </tr>
+
+          </tfoot>
+       </table>
+       <br>
+       <div><h2 class="col-lg-15 text-info section-subheading">Please use horizantal scroll bar for more search options<h2></div>
+       <br><br>
+        <table id="table2" width="100%" class="table table-bordered"></table>
+        <div id="chart"></div>
+
+         </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Plan Your Trip</h2>
+            <h3 class="section-subheading text-muted">Find the museums nearby you</h3>
+          </div>
+        </div>
+        <div class="row">
+
+            <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA; margin-left: auto; margin-right: auto;"></div><br>
+            <button type="button" style= "font-size:20px; background-color:blue; margin-left: 500px;"class="btn btn-info btn-lg" id='roll_up' onclick="show_districts();">Show Locations</button><br>
+
+        </div>
+    </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Your Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Explore</li>
+                    <li>Category: Graphic Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Finish</li>
+                    <li>Category: Identity</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Lines</li>
+                    <li>Category: Branding</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Southwest</li>
+                    <li>Category: Website Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Window</li>
+                    <li>Category: Photography</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+    <script src='scriptlib2.js'></script>
+
+    <script src='table.js'></script>
+    <script src='scriptlib.js'></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </body>
+
 </html>

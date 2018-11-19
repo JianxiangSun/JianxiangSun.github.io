@@ -1,0 +1,82 @@
+body {
+    padding-left: 11em;
+    color: white;
+    background-image:url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    background-color: gray;
+    font-family: Georgia, Arial,Times, serif;
+    }
+h1 {
+background-color:rgba(0,0,0,0.5);
+
+  text-align: center;
+  font-family: Arial;
+ }
+h3 {
+background-color:rgba(0,0,0,0.2);
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 10px;
+  text-align: center;
+  background-color: navy;
+  color: white;
+}
+
+h4 {border-style: solid;
+background-color:rgba(0,0,0,0.2);
+border-width: 1px;
+border-color: black;
+text-align: center;
+margin-left: 300px;
+margin-right: 300px;
+padding: 10px;
+text-align: center;
+background-color: pink;
+color: black;
+font-style:oblique;
+}
+
+p {background-color:rgba(0,0,0,0.68);
+margin-right: 470px;margin-left: 100px;
+font-size: 20px
+}
+ul.navbar {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    width: 12em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+ul.navbar li {
+  background: white;
+  margin: 1.4em 0;
+  padding: 1em;
+  border-right: 1em solid Green }
+
+ul.navbar li:hover {
+    background: Orange;
+ }
+
+ul.navbar a {
+  text-decoration: black }
+a:link {
+  color: blue }
+a:visited {
+  color: purple }
+
+address {
+   margin-top: 20em;
+   padding-top: 1em;
+   border-top: thin dotted;
+   position: relative;
+
+ }
