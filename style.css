@@ -7,42 +7,12 @@
     font-family: Arial,Times, serif;
 }
 
-tfoot input {
-        width: 100%;
-        padding: 12px;
 
-    }
 
-th, td
-      { height:2px;padding:50px;border: 2px solid black;
+th
+      { text-align: center; font-weight:bold;
 }
 
-h1 {
-    text-align: center;
-}
+td {font-weight:400;
 
-.c3-axis-y text
-{
-  font-size: 15px; font-family: Arial,Times, serif; font-weight:bold, color: blue
-}
-
-.c3-axis-x text
-{
-  display:none; font-size: 0px;
-}
-
-.c3-legend-item text
-{
-  font-size: 16px; font-family: Arial,Times, serif;
-}
-
-.c3-chart text {
-  font-size: 25px;font-family: Arial,Times, serif;
-}
-
-.c3 .c3-axis-x path, .c3 .c3-axis-x line {
-    stroke: black;
-}
-.c3 .c3-axis-y path, .c3 .c3-axis-y line {
-    stroke: black;
 }
