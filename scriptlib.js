@@ -10,9 +10,9 @@ $(document).ready(function(){
            items.push(value.fields.name);
            items.push('<img src="' + value.fields.image_url + '" width = "80px">');
             items.push(value.fields.suggested_duration);
+            items.push(value.fields.rough_add);
             items.push(value.fields.type);
             items.push(value.fields.opening_hours);
-            items.push(value.fields.rough_add);
             items.push(value.fields.contact_number);
 
 
@@ -33,12 +33,12 @@ $(document).ready(function(){
                defaultContent:""},
              { title: "Suggested Duration",
              defaultContent:""},
+             { title: "Address",
+               defaultContent:"" },
              { title: "Types",
                defaultContent:"" },
              { title: "Opening Hours",
                defaultContent:""},
-               { title: "Address",
-                 defaultContent:"" },
              { title: "Contact Number",
                defaultContent:""},
             ],
