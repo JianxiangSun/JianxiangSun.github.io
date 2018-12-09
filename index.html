@@ -88,13 +88,16 @@
               <a class="nav-link js-scroll-trigger" href="#services">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Planning</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Exhibition</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#team">Recommendation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Analysis</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Planning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#analysis">Analysis</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -136,8 +139,10 @@
 
             <div class="col-lg-12 text-center">
             <button type="button" style="font-size:25px; height:90px; width:240px;"
-                       class="btn btn-success" id='mainland'>All Museums<br> in One Click</button>
+            class="btn btn-primary" id='mainland'>All Museums<br> in One Click</button>
             <img src="img/play.png" alt="">
+            <button type="button" style="font-size:24px; height:90px; width:245px;"
+           class="btn btn-primary js-scroll-trigger" href="#portfolio">Recent Exhibition<br> in One Click</button>
               </div>
             </div>
             <br><br>
@@ -147,6 +152,105 @@
           frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
             </div>
     </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio" style="background-color: #fff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Recent Exhibition</h2>
+            <h3 class="section-subheading text-muted">Take a look what is happening</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/art.png" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Art</h4>
+              <p class="text-muted">Taste the Beauty</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/history.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>History</h4>
+              <p class="text-muted">Remember and Explore</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/science.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Science</h4>
+              <p class="text-muted">Touch the Future</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/figure.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Figure</h4>
+              <p class="text-muted">Their Stories</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/culture.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Culture</h4>
+              <p class="text-muted">Undersand Hong Kong</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/event.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Events</h4>
+              <p class="text-muted">Join us and have fun</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Team -->
 <section class="bg-light" id="team">
@@ -215,8 +319,8 @@
 </div>
 </section>
 
-    <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
+    <!-- Analysis Grid -->
+    <section class="bg-light" id="analysis">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -375,22 +479,44 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">Gilded Glory: Chaozhou Woodcarving</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Threads</li>
-                    <li>Category: Illustration</li>
+                    <li>2018.11.8 – 2019.2.25</li>
+                    <li>Hong Kong Museum of History</li>
+                    <li><a href="https://www.info.gov.hk/gia/general/201811/07/P2018110600562.htm">See details</a></li>
                   </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/chaozhou.png" alt="">
+                  <p align="left">Chaozhou woodcarving is a well-known school of woodcarving in China. Displaying distinct regional features, the style was popular across ancient Chaozhou prefecture in Guangdong province. As lacquer and gold foil are often applied to Chaozhou woodcarving, it is also known as "gilt wood". Ingenious openwork carving techniques yield exquisite works of art which underscore the three-dimensional nature of carving, while creating a multi-dimensional space of overlapping layers that is akin to a drawing depicting intricate plots. Meanwhile, the meaningful folk motifs and patterns showcase the traditional lifestyle in Chaoshan region.<br><br>
+                  Through approximately 120 sets of exhibits from Guangdong Museum, the exhibition will illustrate the practical usage, subject matters and artistic features of Chaozhou woodcarving, while giving the audience a taste of the customs and humanistic spirit of Chaoshan region. The exhibits will include the large openwork crab cage created by Mr Gu Liuxi, an inheritor of the national intangible cultural heritage of Chaozhou woodcarving. Other works of woodcarving, under various topics, will also be used to introduce the customs and traditions of the Chaoshan community in Hong Kong.</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">A HOLLOW IN A WORLD TOO FULL</h2>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/dong.jpg" alt="">
+                  <ul class="list-inline">
+                    <li>2018.9.8 - 2019.1.4</li>
+                    <li>Tai Kwun</li>
+                    <li>Artist: Cao Fei</li>
+                    <li><a href="https://www.taikwun.hk/en/exhibition/detail/a%20hollow%20in%20a%20world%20too%20full/185">See details</a></li>
+                  </ul>
+                  <p align="left">Cao Fei's art is a study in exuberant ambiguity. Her early works were among the first to tackle the vibrant youth, factory, online, and regional cultures of the Mainland, capturing and reflecting upon the new kinds of human subjects and social relations that its economic transformation was making possible. Neither celebratory nor critical, and always with an eye for the surreal and the fun, her explorations propose characters and scenarios that question larger realities by deviating from them, creating hollows—spaces for suspended reflection—in a fast-moving world full of people, objects, and ideologies.
+<br><br>
+This exhibition, Cao Fei’s first large institutional exhibition in Asia, revolves around a newly commissioned film that engages directly with Tai Kwun's layered history. Prison Architect unfolds as a poetic dialogue across time between two characters—a prisoner and an architect—who represent the building complex’s past as a police, judicial, and penal institution and its future as a cultural institution. Shown in an installation setting designed to embody this same complexity, the film makes references to colonial history, Hong Kong cinema, and the contemporary on the Mainland and globally, asking if we as viewers might be, like the inmates who inhabited this place before us, waiting indefinitely for trials to come.<P>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -409,22 +535,46 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">The Hong Kong Story</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Explore</li>
-                    <li>Category: Graphic Design</li>
+                    <li>Permanent</li>
+                    <li>Hong Kong Museum of History</li>
+                    <li><a href="https://hk.history.museum/en_US/web/mh/exhibition/permanent.html">See details</a></li>
                   </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/story.jpg" alt="">
+                  <p align="left">The Hong Kong Story permanent exhibition is a showcase of the dedicated hard work done by the Museum staff in the past years in collecting, preserving and researching the history and development of Hong Kong. Occupying an area of 7,000 m2, The Hong Kong Story comprises 8 galleries located on two floors. Through the display of over 4,000 exhibits with the use of 750 graphic panels, a number of dioramas and multi-media programmes, and enhanced with special audio-visual and lighting effects, The Hong Kong Story outlines the natural environment, folk culture and historical development of Hong Kong vividly. The exhibition, which is both entertaining and educational, starts telling the story from the Devonian period 400 million years ago and concludes with the reunification of Hong Kong with China in 1997. We sincerely invite you to this 400 million years of historical and cultural journey, and hope that it can arouse your interest in and introspection on the historical and cultural heritage of Hong Kong.
+<br><br>
+You may visit The Hong Kong Story in about 2 hours. However, if you would like to enjoy the 53 multimedia programmes featured in The Hong Kong Story, including theatre shows and interactive booths, you are advised to spare 3 to 4 hours.</p>
+
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">The Beiyang Warlords: War and Politics</h2>
+                  <ul class="list-inline">
+                    <li>2018.10.26 - 2019.1.23</li>
+                    <li>Dr Sun Yat-sen Museum</li>
+                    <li><a href="https://www.lcsd.gov.hk/CE/Museum/sysm/en_US/web/sysm/exhibition/special_exhibition_warlords.html">See details</a></li>
+                  </ul>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/beiyang.jpg" alt="">
+                  <p align="left">The Beiyang warlords were one of the extremely influential military and political powers in modern Chinese history which began in 1895 with Yuan Shikai training soldiers in Xiaozhan, Tianjin. While he expanded his influence through military build-up, he placed his trusted aides in the central and local governments. Over time, the Beiyang warlords headed by Yuan Shikai, powerful enough to influence the politics of the late Qing and early Republican periods, was formed. Following Yuan's death from illness in 1916, no one with the same strength and imposing reputation could take his place as leader. As a result, the Beiyang warlords split into the Anhui, Zhili and Fengtian cliques. Each clique took turns to rule the north. The Beiyang warlords ceased to exist as a viable political force when the Northern Expedition of the Nationalist Party succeeded in 1928. The rise and development of the Beiyang warlords, meanwhile, shed light on the complex political situation of modern China.
+<br><br>
+Tianjin Museum has generously supported this exhibition with the loan of 70 invaluable relics. These, along with items from the collections of the Hong Kong Museum of History, the Tung Wah Group of Hospitals and collectors, will illustrate the rise and development of the Beiyang warlords. We hope visitors can gain a better understanding of this tumultuous period of political instability and conflicts among warlords, as well as China's political development in the late Qing and early Republican periods.</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -443,18 +593,19 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">The Hong Kong Jockey Club Series: Treasures of Time</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Finish</li>
-                    <li>Category: Identity</li>
+                    <li>2018.12.7 - 2019.4.10</li>
+                    <li>Hong Kong Science Museum</li>
+                    <li><a href="https://hk.science.museum/ms/tot2018/eintroduction.html">See details</a></li>
                   </ul>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/zhong.jpg" alt="">
+                  <p align="left">Since ancient times, humans have paid great attention to seasonal changes and performed time measurements using astrology. In order to measure time more precisely, different types of chronographs were invented. After being introduced by European missionaries to China during the late Ming and early Qing dynasties, mechanical clocks proved to be the most reliable and convenient time keepers. These “new products” were designed with novel and ingenious features. They not only reported time accurately, but also comprised a host of other mechanical devices. When the mechanical clocks were wound up, decorative flowers, birds and animals would move back and forth while music played at the same time. The Qing emperors were very fond of these clocks. The palace collected a large number of timepieces and kept them as decorations and furnishings. Later, the Imperial Workshops of the Qing Court were established specifically for the production of timepieces. It first imitated the European style and then gradually developed its own Chinese styles and designs.
+<br><br>
+“The Hong Kong Jockey Club Series: Treasures of Time” exhibition merges science, history and art. Visitors will have an opportunity to appreciate a number of exquisite timepieces, learn more about time and the mechanisms of mechanical clocks from a scientific perspective, and gain a better understanding of the significance of cultural exchange and its historical meaning as well as technological achievements. The exhibition displays 120 magnificent clocks and watches from the collection of The Palace Museum. Some of the items in the collections were tributes from Britain, France and Switzerland, while others were manufactured by local craftsmen in the Workshops and in Guangzhou. Several British clocks, repaired just in recent years, are displayed outside The Palace Museum for the first time. There are also sections illustrating the workshops of craftsmen during the 18th century in Europe, with displays of different kinds of tools and equipment collected by the Science Museum, London, part of the Science Museum Group. Alongside these treasures, the exhibition demonstrates the latest technology, animations, models and interactive exhibits to create a special ambience and to show the audience the principles of different time measuring tools, from ancient Chinese instruments and mechanical timepieces to updated atomic clocks. In addition to enjoying the invaluable collections at close range, experts from The Palace Museum have been invited to conduct live demonstrations of the operation of the clocks, thus enabling the audience to gain an insight into the passing of time and to learn to cherish it.</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Close</button>
                 </div>
               </div>
             </div>
@@ -477,22 +628,51 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">Bruce Lee：Kung Fu ‧ Art ‧ Life</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Lines</li>
-                    <li>Category: Branding</li>
+                    <li>2013.7.20 - 2020.7.20</li>
+                    <li>Hong Kong Heritage Museum</li>
+                    <li><a href="https://www.heritagemuseum.gov.hk/en_US/web/hm/exhibitions/data/exid209.html">See details</a></li>
                   </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fas fa-times"></i>
-                    Close Project</button>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
+                  <p align="left">Since its opening in 2013, the Bruce Lee: Kung Fu‧Art‧Life exhibition at Hong Kong Heritage Museum (HKHM) has enjoyed non-stop popularity, with an average of 600,000 visitors a year. As 2018 marks the 45th anniversary of Lee's passing, we have the pleasure to announce that by mutual consent between HKHM and the Bruce Lee Foundation in the US, the exhibition period has been extended to July 2020. Also, we are grateful that the local and overseas collectors of the Bruce Lee memorabilia whose collections are now on loan to the exhibition have agreed to the extension. We would like to thank all parties concerned for helping to make the Bruce Lee legend continue at HKHM!
+<br><br>
+Bruce Lee was born in San Francisco, but grew up in Hong Kong. He appeared in his first film while still a baby. At the age of 10, he was cast in a starring role in a movie that made him famous as a free-spirited child actor. When he was 18, he returned to the US to pursue his studies, a journey that broadened the horizons of both his life and his mind. With a passion to delve deep into the world of martial arts, this young man established his own kung fu training institute in the US. Merging philosophy and martial arts, he founded his own system, Jeet Kune Do, and became the pre-eminent kung fu grandmaster of his time. A charismatic actor, he also found fame in both the show business and martial arts communities through his role as "Kato" in the US TV series The Green Hornet. Returning to Hong Kong in the early 1970s, he starred in a number of classic kung fu movies, including The Big Boss, Fist of Fury, The Way of the Dragon and Enter the Dragon. His dynamism as a film star and his achievements in the field of martial arts took the world by storm and made him an international icon.
+<br><br>
+Bruce Lee passed away 45 years ago, but his spirit lives on. In collaboration with the Bruce Lee Foundation of the US, Hong Kong Heritage Museum has gathered together more than 600 invaluable items of Bruce Lee memorabilia from local and overseas collectors for an exhibition that looks at Bruce Lee not only as a film star and martial artist, but also as a cultural phenomenon from a more comprehensive, in-depth and independent perspective. Visitors will be able to gain a greater insight into his achievements and contributions, as well as his significance in popular culture, as the exhibition takes a new angle in presenting the legend of Bruce Lee.</p>
+
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Jin Yong Gallery</h2>
+                  <ul class="list-inline">
+                    <li>Permanent0</li>
+                    <li>Hong Kong Heritage Museum</li>
+                    <li><a href="https://www.heritagemuseum.gov.hk/en_US/web/hm/exhibitions/permanent_exhibitions/permanent_jin-yong-gallery.html">See details</a></li>
+                  </ul>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/jinyong.jpg" alt="">
+                  <p align="left">Dr Louis Cha is a world-famous Hong Kong journalist, community leader and literary giant. In 1955, he published his first martial arts novel The Book and the Sword, in New Evening Post, under the pen name Jin Yong coincidentally. The novel was an instant success, and he went on to create 15 extremely popular martial arts novels, ending with The Deer and the Cauldron in 1972. Jin Yong is the most influential Chinese martial arts novel writer in the 20th century, with readers across the globe.<br>
+
+Jin Yong's martial arts novels have inspired producers of movies, TV series, radio dramas, stage dramas, video games and various cultural and creative products, deeply influencing the development of popular culture of Hong Kong over the past decades, and even becoming a type of common language for Chinese readers around the world.
+<br><br>
+The Gallery displays more than 300 exhibits featuring the early career of Dr Louis Cha (Jin Yong), the creative process behind his martial arts novels and the impact the novels have had on Hong Kong's popular culture. Together with the interactive exhibits which include excerpts from films and TV series adapted from Jin Yong's novels, along with theme songs, the exhibition provides visitors with an opportunity to delve into the knowledge embedded in his martial arts novels.
+<br><br>
+With a view to ensuring a comfortable environment for visitors to enjoy the exhibition, we will adopt admission control on site when necessary. Your kind understanding and co-operation are much appreciated.</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -511,18 +691,17 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">SALUTE TO KWAN KUNG</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Southwest</li>
-                    <li>Category: Website Design</li>
+                    <li>2018.10.19 - 2019.1.27</li>
+                    <li>Tai Kwun</li>
+                    <li><a href="https://www.taikwun.hk/en/exhibition/detail/salute%20to%20kwan%20kung/187">See details</a></li>
                   </ul>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/guangong.jpg" alt="">
+                  <p align="left">The famed historical figure General Kwan Yu, also known as Kwan Kung, is the revered guardian of Tai Kwun as well as a major symbol of loyalty and righteousness in our city, worshipped by all walks of life and profession. “Salute to Kwan Kung” is an exhibition about Kwan Kung. Charting the changing influence of this deity from the Three Kingdoms period to contemporary Hong Kong, the show explores how Kwan Kung’s symbolism is deeply embedded in our daily lives, our communities and our disciplinary forces.<p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Close</button>
                 </div>
               </div>
             </div>
@@ -545,18 +724,19 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
-                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <h2 class="text-uppercase">Sound in the City</h2>
                   <ul class="list-inline">
-                    <li>Date: January 2017</li>
-                    <li>Client: Window</li>
-                    <li>Category: Photography</li>
+                    <li>2018.11.09 - 2019.01.29</li>
+                    <li>Hong Kong Visual Arts Centre</li>
+                    <li><a href="https://www.lcsd.gov.hk/CE/Museum/APO/en_US/web/apo/va_sound_in_the_city.html">See details</a></li>
                   </ul>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/city.jpg" alt="">
+                  <p align="left">Our city comprises of people's living experience, stories and emotions, with sound, which has ever existed, which still exists or which is newly-generated. These mean the memories, emotion and shape of our city. People living in the hustling and bustling city may become too used to the surroundings because of their daily routine, and turn themselves a deaf ear to sound and turn themselves a blind eye to the cityscape.
+ <br><br>
+"sound in the city" is an exhibition series to see our city by bringing invisible sound and visible subject matters together with a mix of a variety of media. Through "sound", a highly transmittable and fusible medium integrated in many creative disciplinary, such as virtuality, augmented reality in the cityscape, the imagery and the soundscape of the city will be formed. Integrating the means of science and aesthetics, audiences are to be reminded their relationship with the environment, be open for any imaginations about their life stories. Different voices come and go, bringing us many possibilities and stories beyond vision.</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fas fa-times"></i>
-                    Close Project</button>
+                    Close</button>
                 </div>
               </div>
             </div>
