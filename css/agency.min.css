@@ -129,8 +129,8 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-	font-size: 90%;
-	font-weight: 400;
+	font-size: 100%;
+	font-weight: 800;
 	padding: .75em 0;
 	letter-spacing: 1px;
 	color: #fff;

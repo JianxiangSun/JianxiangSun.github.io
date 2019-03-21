@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var  items = [];
   var i = 0;
-  var airtable_read_endpoint = "https://api.airtable.com/v0/appf1f9Jo9tPha7wJ/The%20top%2013%20Museums?api_key=keyLZQGPBz655pCmy";
+  var airtable_read_endpoint = "https://api.airtable.com/v0/appf1f9Jo9tPha7wJ/museum?api_key=keyLZQGPBz655pCmy";
   var dataSet = [];
   $.getJSON(airtable_read_endpoint, function(result) {
          $.each(result.records, function(key,value) {

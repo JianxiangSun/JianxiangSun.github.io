@@ -102,14 +102,12 @@ $(document).ready(function(){
                      },
 
                      axis: {
-                         x: {
-                         label: {text: 'Museums'},
-                     },
+                         x: {label: 'Museums'},
                          y: {
                            max: 70,
                            min: 0,
                            label: {
-                           text: 'Percentage of rating “Excellent” (%)',
+                           text:'Percentage of rating “Excellent” (%)',
                            position: 'outer-top'
                          },
                            padding: {top:0, bottom:0}
