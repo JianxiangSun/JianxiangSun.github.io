@@ -224,7 +224,7 @@ for (var i in map6_data) {
 };
 
 var map7_items = [];
-var airtable_read_endpoint = "https://api.airtable.com/v0/appf1f9Jo9tPha7wJ/The%20top%2013%20Museums?api_key=keyLZQGPBz655pCmy";
+var airtable_read_endpoint = "https://api.airtable.com/v0/appf1f9Jo9tPha7wJ/museum?api_key=keyLZQGPBz655pCmy";
 var map7_data = [];
 $.getJSON(airtable_read_endpoint, function(result) {
        $.each(result.records, function(key,value) {
