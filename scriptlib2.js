@@ -15,7 +15,9 @@ var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.pn
 
 var map = L.map('map')
       .addLayer(mapboxTiles)
-      .setView([22.344286, 114.135550], 10);
+      .setView([22.344286, 114.135550], 11);
+
+      layerGroup = L.layerGroup().addTo(map);
 
       // create custom icon
 var yellow = L.icon({
@@ -84,7 +86,7 @@ for (var i in data) {
   var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
   L.marker( latlng , {icon: yellow})
   .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+ '" width = "300px"><br>'+data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -111,7 +113,7 @@ for (var i in map2_data) {
   var latlng = L.latLng({ lat: map2_data[i].latitud, lng: map2_data[i].longitud });
   L.marker( latlng , {icon: red})
   .bindPopup( '<a href="' + map2_data[i].url + '" target="_blank">' + '<img src="' + map2_data[i].image_url+ '" width = "300px"><br>'+map3_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -139,7 +141,7 @@ for (var i in map3_data) {
   var latlng = L.latLng({ lat: map3_data[i].latitud, lng: map3_data[i].longitud });
   L.marker( latlng , {icon: blue})
   .bindPopup( '<a href="' + map3_data[i].url + '" target="_blank">' + '<img src="' + map3_data[i].image_url+ '" width = "300px"><br>'+map3_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -165,7 +167,7 @@ for (var i in map4_data) {
   var latlng = L.latLng({ lat: map4_data[i].latitud, lng: map4_data[i].longitud });
   L.marker( latlng , {icon: gallery})
   .bindPopup( '<a href="' + map4_data[i].url + '" target="_blank">' + '<img src="' + map4_data[i].image_url+ '" width = "300px"><br>'+map4_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -191,7 +193,7 @@ for (var i in map5_data) {
   var latlng = L.latLng({ lat: map5_data[i].latitud, lng: map5_data[i].longitud });
   L.marker( latlng , {icon: general})
   .bindPopup( '<a href="' + map5_data[i].url + '" target="_blank">' + '<img src="' + map5_data[i].image_url+ '" width = "300px"><br>'+map5_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -217,7 +219,7 @@ for (var i in map6_data) {
   var latlng = L.latLng({ lat: map6_data[i].latitud, lng: map6_data[i].longitud });
   L.marker( latlng , {icon: speciality})
   .bindPopup( '<a href="' + map6_data[i].url + '" target="_blank">' + '<img src="' + map6_data[i].image_url+ '" width = "300px"><br>'+map6_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
 
@@ -243,6 +245,11 @@ for (var i in map7_data) {
   var latlng = L.latLng({ lat: map7_data[i].latitud, lng: map7_data[i].longitud });
   L.marker( latlng , {icon: recommendation})
   .bindPopup( '<a href="' + map7_data[i].url + '" target="_blank">' + '<img src="' + map7_data[i].image_url+ '" width = "300px"><br>'+map7_data[i].name + '</a>' )
-  .addTo(map);
+  .addTo(layerGroup);
 };
 };
+
+function clear_markers () {
+               // map.removeLayer(marker);
+               layerGroup.clearLayers();
+}
